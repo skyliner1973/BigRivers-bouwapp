@@ -1,7 +1,7 @@
 var CACHE = 'br26-v1';
 var BESTANDEN = [
-  './bouwplanning.html',
-  './manifest.json'
+  '/BigRivers-bouwapp/bouwplanning.html',
+  '/BigRivers-bouwapp/manifest.json'
 ];
 
 self.addEventListener('install', function(e) {
@@ -23,7 +23,6 @@ self.addEventListener('activate', function(e) {
 });
 
 self.addEventListener('fetch', function(e) {
-  // Firebase requests altijd online
   if (e.request.url.includes('firebase') || e.request.url.includes('gstatic')) {
     return;
   }
